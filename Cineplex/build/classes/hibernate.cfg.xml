@@ -5,7 +5,7 @@
 <hibernate-configuration>
 	<session-factory>
 		<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
-		<property name="connection.url">jdbc:mysql://localhost:3306/onlinestock</property>
+		<property name="connection.url">jdbc:mysql://localhost:3306/cineplex</property>
 		<property name="connection.username">root</property>
 		<property name="connection.password">091250193</property>
 		<property name="dialect">org.hibernate.dialect.MySQLDialect</property>
@@ -14,7 +14,13 @@
 		<!-- 自动把实体类与属性映射成数据库中的表与列 -->
 		<property name="hbm2ddl.auto">create</property>
 
-		<mapping class="edu.nju.onlinestock.model.User" />
+		<mapping class="cineplex.bean.Book" />
+		<mapping class="cineplex.bean.ConsumeRecord" />
+		<mapping class="cineplex.bean.Hall" />
+		<mapping class="cineplex.bean.Member" />
+		<mapping class="cineplex.bean.Movie" />
+		<mapping class="cineplex.bean.Plan" />
+		<mapping class="cineplex.bean.Ticket" />
 
 	</session-factory>
 </hibernate-configuration>
